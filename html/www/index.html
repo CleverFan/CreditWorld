@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link href="../jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="../jquery-mobile/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <title>CreditWorld</title>
+    <script src="../jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+	<script src="js/index.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div data-role="page" id="mainPage" data-fullscreen="false" >
+      <div data-role="header" data-position="fixed">
+        <h1>信用世界</h1>
+      </div>
+      
+      <div data-role="content" class="main-content">
+        <a href="#personMainPage" data-role="button" data-icon="star" data-transition="slidedown">个人信用</a>
+        <a href="#companyMainPage" data-role="button" data-icon="star" data-transition="slidedown">公司信用</a>
+
+	  </div>
+
+      <div data-role="footer" data-position="fixed" class="main-footer">
+        <h4>CopyRighr@信鸽</h4>
+      </div>
+    
+    </div>
+    
+    
+    <!--   个人信用登录界面开始  -->
+    <div data-role="page" id="personMainPage" data-fullscreen="false">
+    	<div data-role="header" data-position="fixed">
+            <a href="#" data-role="button" data-icon="back" data-rel="back" data-transition="slidup">back</a>
+            <h1>个人信用</h1>
+            <a href="#" data-role="button" data-icon="gear">set</a>
+      	</div>
+    
+      <div data-role="content" class="person-main-content">
+      	<form class="personLoginForm">
+        	<label>用户名:</label>
+            <input type="text" name="user.loginName">
+            <label>密码:</label>
+            <input type="password" name="user.password">
+            <input type="button" value="登录" id="userLoginButton">
+        </form>
+		<label style="float:right;">还没有账号？<a href="personRegister.html" data-ajax="false">点击注册&nbsp;&nbsp;&nbsp;</a></label>
+           
+	  </div>
+
+      <div  data-role="footer" data-position="fixed" class="person-main-footer">
+        <h4>CopyRighr@信鸽</h4>
+      </div>
+    </div>
+    
+    <!--   个人信用主界面结束  -->
+    
+    <!--  公司信用主界面开始   -->
+    <div data-role="page" id="companyMainPage" data-fullscreen="false">
+    	<div data-role="header" data-position="fixed">
+            <a href="#" data-role="button" data-icon="back" data-rel="back" data-transition="slidup">back</a>
+            <h1>公司信用</h1>
+            <a href="#" data-role="button" data-icon="gear">set</a>
+      	</div>
+    
+     <div data-role="content" class="company-main-content">
+		<form class="companyLoginForm">
+        	<label>用户名:</label>
+            <input type="text" name="company.loginName">
+            <label>密码:</label>
+            <input type="password" name="company.cpassword">
+            <input type="button" value="登录" id="companyLoginButton">
+        </form>
+		<label style="float:right;">还没有账号？<a href="companyRegist.html" data-ajax="false">点击注册&nbsp;&nbsp;&nbsp;</a></label>
+           
+	  </div>
+
+      <div  data-role="footer" data-position="fixed" class="company-main-footer">
+        <h4>CopyRighr@信鸽</h4>
+      </div>
+    </div>
+    <!--  公司信用主界面结束   -->
+    
+    <!--  个人登录界面开始  -->
+    	
+    <!--  个人登录界面结束  -->
+</body>
+
+</html>

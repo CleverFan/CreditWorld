@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+    <bean id="userService"
+        class="com.credit.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao" />
+    </bean>
+    <bean id="userDetService"
+        class="com.credit.service.impl.UserDetServiceImpl">
+        <property name="userDetDao" ref="userDetDao" />
+    </bean>
+    
+    <bean id="companyService"
+        class="com.credit.service.impl.CompanyServiceImpl">
+        <property name="companyDao" ref="companyDao" />
+    </bean>
+    <bean id="companyDetService"
+        class="com.credit.service.impl.ComDetServiceImpl">
+        <property name="companyDetDao" ref="companyDetDao" />
+    </bean>
+    
+    <bean id="comBaseService"
+        class="com.credit.service.impl.ComBaseServiceImpl">
+        <property name="companyBaseDao" ref="companyBaseDao" />
+    </bean>
+    
+    <bean id="userDao"
+        class="com.credit.dao.UserDao">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+    <bean id="userDetDao"
+        class="com.credit.dao.UserDetDao">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+    <bean id="companyDao"
+        class="com.credit.dao.CompanyDao">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+    <bean id="companyBaseDao"
+        class="com.credit.dao.CompanyBaseDao">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <bean id="companyDetDao"
+        class="com.credit.dao.CompanyDetDao">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+</beans>

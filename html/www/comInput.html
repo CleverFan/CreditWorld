@@ -1,0 +1,567 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link href="../jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="../jquery-mobile/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <title>register</title>
+    <script src="../jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/companyInput.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div data-role="page" id="personRegisterDetPage" data-fullscreen="false">
+    	<div data-role="header" data-position="fixed">
+            <a href="#" data-role="button" data-icon="back" data-rel="back" data-transition="slidup">back</a>
+            <h1>基本信息填写</h1>
+            <a href="#" data-role="button" data-icon="gear">set</a>
+      	</div>
+    
+     	<div data-role="content" class="person-registerDet-content">
+			<form id = "comBase">
+            <table>
+            	<tr>
+                	<td>公司名称&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.cname" placeholder="中文" data-mini="true">
+                    <input type="text" name="comBase.ename" placeholder="英文" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>注册地址&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.raddress" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>经营地址&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.maddress"data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>经营面积&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.marea" placeholder="平方米" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>场所产权性质&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.csxz" placeholder="租赁/自有" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>联系电话&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.phone" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>传真&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.cz" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>邮编&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.yb" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>网址&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.wadd" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>企业类型&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.ctype"  data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>注册号&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.zch" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>注册成立时间&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.zctime" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>贷款卡证号&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.dkk" data-mini="true"></td>
+                </tr>
+                <tr>
+                	<td>组织机构代码&nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="comBase.zzjgdm" data-mini="true"></td>
+                </tr>
+
+            </table>
+            <button data-ajax="false" id = "conDetNext" value="提交并进入下一步" data-theme="b" data-mini="true"></button>
+            </form>
+            
+	    </div>
+         <div  data-role="footer" data-position="fixed" class="person-registerDet2-footer">
+        <h4>CopyRight@信鸽</h4>
+      </div>
+     
+	</div>
+<!------------------------>
+	  <div data-role="page" id="personRegisterDetTooPage" data-fullscreen="false">
+    	<div data-role="header" data-position="fixed">
+            <a href="#" data-role="button" data-icon="back" data-rel="back" data-transition="slidup">back</a>
+            <h1>基本信息填写</h1>
+            <a href="#" data-role="button" data-icon="gear">set</a>
+      	</div>
+    
+     	<div data-role="content" class="person-registerDet2-content">
+			<form id = "comDetToo">
+            <table>
+            	<tr>
+                	<td>连续经营时间&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select name="comDet.lxtime" data-mini="true">
+                    	<option  value="≥10年_3" data-mini="true">≥10年</option>
+                        <option  value="5-10年_2.7" data-mini="true">5-10年</option>
+                        <option  value="3-5年_2.4" data-mini="true">3-5年</option>
+                        <option  value="＜3年_1.8" data-mini="true">＜3年</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>注册资本&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select name="comDet.zczb" data-mini="true">
+                    	<option  value="≥1000万_2" data-mini="true">≥1000万</option>
+                        <option  value="500-1000万_1.8" data-mini="true">500-1000万</option>
+                        <option  value="100-500万_1.6" data-mini="true">100-500万</option>
+                        <option  value="＜100万_1.2" data-mini="true">＜100万</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>资产总额&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zcze">
+                    	<option  value="≥3000万_8" data-mini="true">≥3000万</option>
+                        <option  value="1000-3000万_7.2" data-mini="true">100-3000万</option>
+                        <option  value="100-1000万_6.4" data-mini="true">100-1000万</option>
+                        <option  value="＜100万_4.8" data-mini="true">＜100万</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>经营场地&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.jycd">
+                    	<option  value="自有，经营面积≥500平方米_2" data-mini="true">自有，面积≥500平方米</option>
+                        <option  value="自有，经营面积＜500平方米_1.8" data-mini="true">自有，面积＜500平方米</option>
+                        <option  value="租赁，经营面积≥500平方米_1.6" data-mini="true">租赁，面积≥500平方米</option>
+                        <option  value="＜租赁，经营面积＜500平方米_1.2" data-mini="true">租赁，面积＜500平方米</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>总经理管理岗位年限&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zjlglgwnx">
+                    	<option  value="≥10年_1" data-mini="true">≥10年</option>
+                        <option  value="6-10年_0.9" data-mini="true">6-10年</option>
+                        <option  value="3-6年_0.8" data-mini="true">3-6年</option>
+                        <option  value="＜3年_0.6" data-mini="true">＜3年</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>总经理学历&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zjlxl">
+                    	<option  value="硕士及以上_1" data-mini="true">硕士及以上</option>
+                        <option  value="大学本科_0.9" data-mini="true">大学本科</option>
+                        <option  value="大学专科_0.8" data-mini="true">大学专科</option>
+                        <option  value="高中及以下_0.6" data-mini="true">高中及以下</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>员工学历结构（大专及以上比例）&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.ygxljg">
+                    	<option  value="≥50%_3" data-mini="true">≥50% </option>
+                        <option  value="30%-50%_2.7" data-mini="true">30%-50%</option>
+                        <option  value="10%-30%_2.4" data-mini="true">10%-30%</option>
+                        <option  value="＜10%_1.8" data-mini="true">＜10%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>知识产权、专利保护数量&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zscqsl">
+                    	<option  value="≥2项_5" data-mini="true">≥2项</option>
+                        <option  value="1项_4.5" data-mini="true">1项</option>
+                        <option  value="申报中_4.0" data-mini="true">申报中</option>
+                        <option  value="无_3.0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>品牌价值&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.ppjz">
+                    	<option  value="国家级产品名牌或驰名商标 _5" data-mini="true">国家级产品名牌或驰名商标</option>
+                        <option  value="省级产品名牌或驰名商标_4.5" data-mini="true">省级产品名牌或驰名商标</option>
+                        <option  value="省级以下产品名牌_4.0" data-mini="true">省级以下产品名牌</option>
+                        <option  value="注册商标_3.0" data-mini="true">注册商标</option>
+                    </select>
+                    </td>
+                </tr>
+               
+                <tr>
+                	<td>机构设置的合理性&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.jgszhlx">
+                    	<option  value="结构清晰，合理_3" data-mini="true">结构清晰，合理</option>
+                        <option  value="较合理_2.7" data-mini="true">较合理</option>
+                        <option  value="一般_2.4" data-mini="true">一般</option>
+                        <option  value="不清晰_1.8" data-mini="true">不清晰</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>质量管理体系认证&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zlrzgltx">
+                    	<option  value="有_1" data-mini="true">有</option>
+                        <option  value="申报中_0.8" data-mini="true">申报中</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>服务网点&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.fwwd">
+                    	<option  value="10个以上_1" data-mini="true">10个以上</option>
+                        <option  value="5-10个_0.8" data-mini="true">5-10个</option>
+                        <option  value="1-5个_0.6" data-mini="true">1-5个</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>人力资源管理制度&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.rlzygl">
+                    	<option  value="完善_1" data-mini="true">完善</option>
+                        <option  value="较为完善_0.8" data-mini="true">较为完善</option>
+                        <option  value="基本健全_0.6" data-mini="true">基本健全</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>人员考核&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.rykh">
+                    	<option  value="完善_1" data-mini="true">完善</option>
+                        <option  value="较为完善_0.8" data-mini="true">较为完善</option>
+                        <option  value="基本健全_0.6" data-mini="true">基本健全</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>职业道德与诚信培训&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zzddpx">
+                    	<option  value="有_3" data-mini="true">有</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+               
+               <tr>
+                	<td>客户管理制度建设&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.khglzd">
+                    	<option value="完善_2" data-mini="true">完善</option>
+                        <option value="较为完善_1.6" data-mini="true">较为完善</option>
+                        <option  value="基本健全_1.2" data-mini="true">基本健全</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>合同管理&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.htgl">
+                    	<option  value="完善_3" data-mini="true">完善</option>
+                        <option  value="较为完善_2.4" data-mini="true">较为完善</option>
+                        <option  value="基本健全_1.8" data-mini="true">基本健全</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>财务管理制度&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.cwglzd"cwglzd>
+                    	<option value="完善_3" data-mini="true">完善</option>
+                        <option value="较为完善_2.4" data-mini="true">较为完善</option>
+                        <option value="基本健全_1.8" data-mini="true">基本健全</option>
+                        <option value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>资产负债率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zcfzl">
+                    	<option value="≥30%_2" data-mini="true">≥30%</option>
+                        <option value="30%-50%_1.8" data-mini="true">30%-50%</option>
+                        <option value="50-75%_1.6" data-mini="true">50-75%</option>
+                        <option value="＞75%_1.2" data-mini="true">＞75%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>流动比率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.ldbl">
+                    	<option value="≥1.3_2" data-mini="true">≥1.3</option>
+                        <option value="0.7-1.3_1.8" data-mini="true">0.7-1.3</option>
+                        <option value="0.1-0.7_1.6" data-mini="true">0.1-0.7</option>
+                        <option value="＜0.1_1.2" data-mini="true">＜0.1</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>速动比率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.sdbl">
+                    	<option value="≥1.2_2" data-mini="true">≥1.2</option>
+                        <option value="0.7-1.2_1.8" data-mini="true">0.7-1.2</option>
+                        <option value="0.1-0.7_1.6" data-mini="true">0.1-0.7</option>
+                        <option value="＜0.1_1.2" data-mini="true">＜0.1</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>资产净利率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zcjll">
+                    	<option value="≥5%_2" data-mini="true">≥5%</option>
+                        <option value="3%-5%_1.8" data-mini="true">3%-5%</option>
+                        <option value="1%-3%_1.6" data-mini="true">1%-3%</option>
+                        <option value="<1%_1.2" data-mini="true">＜1%_1.2</option>
+                    </select>
+                    </td>
+                </tr>
+                 <tr>
+                	<td>净资产收益率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.jzcsyl">
+                    	<option value="≥12%_2" data-mini="true">≥12%</option>
+                        <option value="7%-12%_1.8" data-mini="true">7%-12%</option>
+                        <option value="3%-7%_1.6" data-mini="true">3%-7%</option>
+                        <option value="<3%_1.2" data-mini="true">＜3%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>销售净利率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true"name="comDet.xsjll">
+                    	<option value="≥5%_2" data-mini="true">≥5%</option>
+                        <option value="2%-5%_1.8" data-mini="true">2%-5%</option>
+                        <option  value="0.5%-2%_1.6" data-mini="true">0.5%-2%</option>
+                        <option  value="<0.5%_1.2" data-mini="true">＜0.5%_1.2</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>销售额增长率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.xsezzl">
+                    	<option value="≥20%_2" data-mini="true">≥20%_</option>
+                        <option value="20%-12%_1.8" data-mini="true">20%-12%</option>
+                        <option value="12%-6%_1.6" data-mini="true">12%-6%</option>
+                        <option value="<6%_1.2" data-mini="true">＜6%_1.2</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>总资产增长率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.zzczzl">
+                    	<option value="≥12%_2" data-mini="true">≥12%</option>
+                        <option value="7%-12%_1.8" data-mini="true">7%-12%</option>
+                        <option value="3%-7%_1.6" data-mini="true">3%-7%</option>
+                        <option value="<3%_1.2" data-mini="true">＜3%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>净资产增长率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.jzczzl">
+                    	<option value="≥10%_2" data-mini="true">≥10%</option>
+                        <option value="6%-10%_1.8" data-mini="true">6%-10%</option>
+                        <option value="2%-6%_1.6" data-mini="true">2%-6%</option>
+                        <option value="<2%_1.2" data-mini="true">＜2%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>净利润增长率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select name="comDet.jlrzzl" data-mini="true">
+                    	<option  value="≥7.5%_2" data-mini="true">≥7.5%</option>
+                        <option value="3%-7.5%_1.8" data-mini="true">3%-7.5%</option>
+                        <option  value="1.5%-3%_1.6" data-mini="true">1.5%-3%</option>
+                        <option  value="<1.5%_1.2" data-mini="true">＜1.5%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>现金流量充足率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select name="comDet.xjllczl" data-mini="true">
+                    	<option value="≥1.0_2" data-mini="true">≥1.0</option>
+                        <option value="0.6-1.0_1.8" data-mini="true">0.6-1.0</option>
+                        <option value="0.4-0.6 " data-mini="true">0.4-0.6 </option>
+                        <option value="<0.4%_1.2" data-mini="true">＜0.4%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>现金流动负债比率&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.xjldfzbl">
+                    	<option  value="≥30%_2" data-mini="true">≥30%</option>
+                        <option  value="15%-30%_1.8" data-mini="true">15%-30%</option>
+                        <option  value="8%-15%_1.6" data-mini="true">8%-15%</option>
+                        <option  value="<8%_1.2" data-mini="true">＜8%</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>涉及企业的不良诉讼、仲裁记录&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.sszcjl">
+                    	<option  value="无_5" data-mini="true">无</option>
+                        <option  value="有_0" data-mini="true">有</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>企业在公安、海关、工商、税务、商检、外汇、银行、劳保等部门的不良记录&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.gabljl">
+                    	<option  value="无_5" data-mini="true">无</option>
+                        <option  value="有_0" data-mini="true">有</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>企业负责人获得嘉奖&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.fzrjj">
+                    	<option  value="省级及以上_3" data-mini="true">省级及以上</option>
+                        <option  value="市级_2.4" data-mini="true">市级</option>
+                        <option  value="县级_1.8" data-mini="true">县级</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>企业负责人违规违法记录&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.fzrwf">
+                    	<option  value="无_2" data-mini="true">无</option>
+                        <option  value="有_0" data-mini="true">有</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>企业获得行政机关或社团组织评定的荣誉记录&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.qyry">
+                    	<option  value="3个以上_5" data-mini="true">3个以上</option>
+                        <option  value="3个_4" data-mini="true">2个</option>
+                        <option  value="1个_3" data-mini="true">1个</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>企业网站质量&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.qywzzl">
+                    	<option  value="很好_5" data-mini="true">很好</option>
+                        <option  value="较好_4" data-mini="true">较好</option>
+                        <option  value="一般_3" data-mini="true">一般</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>电子商务交易&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.dzswjy">
+                    	<option  value="无_0" data-mini="true">无</option>
+                        <option  value="有_4" data-mini="true">有</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>企业内部管理软件&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <select data-mini="true" name="comDet.qyglrj">
+                    	<option  value="3个以上_3" data-mini="true">3个以上</option>
+                        <option  value="3个_2.4" data-mini="true">2个</option>
+                        <option  value="1个_1.8" data-mini="true">1个</option>
+                        <option  value="无_0" data-mini="true">无</option>
+                    </select>
+                    </td>
+                </tr>
+                
+            </table>
+            
+            <br>
+            <button data-ajax="false" id = "conDet" value="提交" data-theme="b" data-mini="true"></button>
+            </form>
+            
+	    </div>
+
+      <div  data-role="footer" data-position="fixed" class="person-registerDet2-footer">
+        <h4>CopyRight@信鸽</h4>
+      </div>
+    </div>
+</body>
+</html>

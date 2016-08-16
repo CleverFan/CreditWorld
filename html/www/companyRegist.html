@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    
+    <link href="../jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="../jquery-mobile/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+
+    <title>register</title>
+    <script src="../jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/companyRegist.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div data-role="page" id="personRegisterPage" data-fullscreen="false">
+    	<div data-role="header" data-position="fixed">
+            <a href="#" data-role="button" data-icon="back" data-rel="back" data-transition="slidup">back</a>
+            <h1>公司注册</h1>
+            <a href="#" data-role="button" data-icon="gear">set</a>
+      	</div>
+    
+     <div data-role="content" class="person-register-content">
+		<div style="text-align:center;"><font size="+2" face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace">承 诺 书</font></div><br>
+    <p>本企业自愿申请参加企业信用评级；同意将企业名称、组织机构代码、信用等级、通讯地址、邮编、电话、网址、主营业务及产品等基本信息在媒体上公开。
+	<br><br>本企业承诺，在申请本行业企业信用评价中所提交的证明材料、数据和资料全部真实、合法、有效，复印件与原件内容相一致，并对因材料虚假所引发的一切后果负法律责任。
+	本企业符合下列条件：<br><br>
+		&nbsp;&nbsp;成立满三个会计年度；<br>
+		&nbsp;&nbsp;近三年均有主营业务收入；<br>
+		&nbsp;&nbsp;企业处于持续经营状态，非即将关、停的企业。<br>
+	</p>
+	  <br>
+      
+      <input type="radio" name="trueradio" id="trueradio" data-mini="true">
+      <label for="trueradio">我承诺</label><br>
+      <a href="#personRegisterinfoPage" data-role="button" id="next" style="display:none;">下一步</a>
+	</div>
+      <div  data-role="footer" data-position="fixed" class="person-register-footer">
+        <h4>CopyRight@信鸽</h4>
+      </div>
+    </div>
+    
+    <!-------------------------------------------- -->
+    
+    <div data-role="page" id="personRegisterinfoPage" data-fullscreen="false">
+    	<div data-role="header" data-position="fixed">
+            <a href="#" data-role="button" data-icon="back" data-rel="back" data-transition="slidup">back</a>
+            <h1>基本信息填写</h1>
+            <a href="#" data-role="button" data-icon="gear">set</a>
+      	</div>
+    
+     	<div data-role="content" class="person-registerInf-content">
+			<form id = "comBase">
+           		<label>公司名称</label>
+                <input type="text" name="company.cname"/>
+                <label>登录名</label>
+                <input type="text" name="company.loginName"/>
+                <label>密码</label>
+                <input type="password" name="company.cpassword" id="pa"/>
+                <label>确认密码</label>
+                <input type="password" id="repa"/>
+                <br>
+            <button id = "conBsaeNext" value="注册" data-theme="b" data-mini="true"></button>
+            </form>
+            
+	    </div>
+
+
+      <div  data-role="footer" data-position="fixed" class="person-registerInf-footer">
+        <h4>CopyRight@信鸽</h4>
+      </div>
+    </div>
+</body>
+</html>
